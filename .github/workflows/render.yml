@@ -1,0 +1,38 @@
+name: Render
+
+on:
+  push:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8
+
+      - name: Install RenderCV
+        run: uv tool install rendercv
+
+      - name: Render resume
+        run: ./render.sh
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: "auto: update rendered resume"
+          branch: "automation/render-resume"
+          delete-branch: true
+          body: |
+            Generated automatically by GitHub Actions.
+          add-paths: |
+            resume.pdf
