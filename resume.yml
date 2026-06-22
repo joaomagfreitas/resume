@@ -47,14 +47,6 @@ cv:
           - Worked closely with colleagues from all over the world around the world (Portugal, USA, Germany, Brazil, China)
           - Flutter, BLoC, UI Testing, KISS, Pair Programming, Scrum
     education:
-      - institution: FCUP - Faculdade de Ciências da Universidade do Porto
-        area: Information Security
-        degree: MSc (dropout)
-        start_date: 2022-09
-        end_date: 2023-07
-        location: Porto
-        highlights:
-          - Theory and Practice of Security Attacks, Operations Security (SOC), Privacy Enhancing Technologies (PET), Network Security, Applied Cryptography
       - institution: ISEP - Instituto Superior de Engenharia do Porto
         area: Software Engineering
         degree: BSc + MSc
