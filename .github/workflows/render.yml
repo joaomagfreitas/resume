@@ -21,7 +21,7 @@ jobs:
         uses: astral-sh/setup-uv@v8.2.0
 
       - name: Install RenderCV
-        run: uv tool install rendercv
+        run: uv tool install "rendercv[full]"
 
       - name: Render resume
         run: ./render.sh
