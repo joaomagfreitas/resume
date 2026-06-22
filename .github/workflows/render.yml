@@ -30,7 +30,6 @@ jobs:
         uses: peter-evans/create-pull-request@v8.1.1
         with:
           commit-message: "auto: update rendered resume"
-          branch: "automation/render-resume"
           delete-branch: true
           body: |
             Generated automatically by GitHub Actions.
